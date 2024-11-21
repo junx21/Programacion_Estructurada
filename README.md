@@ -54,6 +54,30 @@ proyecto/
 - **Objetivo**: Implementar una función que copie una estructura `Estudiante` y devuelva la copia.
 - **Funciones**:
   - Imprimir los datos del estudiante copiado.
+ 
+Debería de aparecer un archivo llamado copia_estructuras.c, con el siguiente código: 
+```cpp
+#include "copia_estructuras.h"
+#include "../EJ1/estructuras.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+struct Estudiante copiarEstudiante(struct Estudiante est) {
+    struct Estudiante nuevoEst;
+
+    strcpy(nuevoEst.nombre, est.nombre);
+    nuevoEst.edad = est.edad;
+    nuevoEst.promedio = est.promedio;
+
+    // Imprimir los datos del estudiante copiado
+    printf("Datos del estudiante copiado:\n");
+    printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", nuevoEst.nombre, nuevoEst.edad, nuevoEst.promedio);
+
+    return nuevoEst;
+}
+```
 
 ### Ejercicio 4: Alias de Tipos
 
